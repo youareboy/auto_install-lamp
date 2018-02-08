@@ -48,7 +48,7 @@ fi
 cp php.ini-development /usr/local/php/etc/php.ini
 cd /root
 chmod -R 755 /usr/local/apache/modules/libphp5.so
-sed -i '/AddType application\/x-gzip .gz .tgz/a\AddType application\/x-httpd-php .php' /usr/local/apache/conf/httpd.conf
+sed -i '/AddType application\/x-gzip .gz .tgz/a\    AddType application\/x-httpd-php .php' /usr/local/apache/conf/httpd.conf
 sed -i "s/DirectoryIndex index.html/DirectoryIndex index.html index.php/g" /usr/local/apache/conf/httpd.conf
 rm -rf /usr/local/apache/htdocs/*
 cat >>/usr/local/apache/htdocs/index.php<<eof
